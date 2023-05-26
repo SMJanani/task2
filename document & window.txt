@@ -1,0 +1,106 @@
+DOCUMENT OBJECT
+    The document object represent a web page that is loaded in the browser. 
+    By accessing the document object, we can access the element in the HTML page. 
+    Using document object, JavaScript can modify, add and delete the HTML elements, attributes CSS styles in the page.
+    Document Object is property of window object that points to the DOM document loaded in that window.
+    The document object can be accessed with a window.document or just document.
+
+PROPERTIES OF DOCUMENT
+SYNTAX
+    document.property_name;
+EXAMPLE
+    document.title; 
+    It returns the title element of the document.
+    document.head;
+    It returns the head element of the document.
+
+METHODS OF DOCUMENT
+SYNTAX
+    document.method_name;
+EXAMPLE
+    document.createElement();
+    It is used to create HTML element .
+    document.createEvent();
+    It is used to create a new events object.
+
+
+EXAMPLE
+<!DOCTYPE html>
+    <html>
+        <head>
+	        <title>Document Object</title>
+        </head>
+        <body>
+	        <h1>Document</h1>
+	        <button onclick="myFunction()">CLICK</button>
+	        <p id="demo1"></p>
+        <script>
+		    function myFunction() {
+			    var title = document.title;
+			    var domain = document.domain;
+			    var body = document.body;
+			    document.getElementById("demo1").innerHTML ="the title of the document is : "+ title + "<br>"
+			    + "domain : " + domain + "<br>" + "body : " + body;
+		    }
+	    </script>
+        </body>
+    </html>
+
+
+WINDOW OBJECT
+    The window object is the topmost object of the Document Object Model (DOM) hierarchy. 
+    It represents a browser window or frame that displays the contents of the webpage.
+    The window object represents a window/tab containing a DOM document. 
+    Whenever a window appears on the screen to display the contents of the document, the window object is created.
+    Window object has properties like browser history, location and the device’s screen.
+
+PROPERTIES OF WINDOW
+SYNTAX
+    window.property_name;
+EXAMPLE
+    window.Window; 
+    It returns the current window or frame.
+    window.Location;
+    It contains the URL of the current window.
+
+METHODS OF WINDOW
+SYNTAX
+    window.method_name;
+EXAMPLE
+    window.close();
+    It is used for closing a certain window or tab of the browser which was previously opened.
+    window.confirm();
+     It is used to display a modal dialog with an optional message and two buttons i.e. OK and Cancel. 
+     It returns true if the user clicks “OK”, and false otherwise.
+
+
+EXAMPLE
+<!DOCTYPE html>
+    <html>
+        <head>
+	        <title> Window Object</title>
+        </head>
+        <body>
+	        <h1>Window</h1>
+	        <button onclick="show()">Click</button>
+	        <p id="demo2"></p>
+        <script>
+		    function show() {
+			    var h = window.innerHeight;
+			    var w = window.innerWidth;
+			    var l = window.location;
+			    var c = window.closed;
+			    document.getElementById("demo2").innerHTML ="Frame's Height: "+ h + "<br>" + "Frame's Width: "+ w + "<br>"
+			    + "Window location:" + l + "<br>" + "Window Closed: " + c;
+		    }
+	    </script>
+        </body>
+    </html>
+
+
+DIFFERENCE
+    The major difference is that both window object and document object have properties and methods. 
+    Few method names are same in both objects but with different behavior. 
+    In this example,
+     window.open() opens a new tab or window while document.open() creates a blank document within the window.
+     
